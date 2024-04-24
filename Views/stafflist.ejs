@@ -1,0 +1,62 @@
+<!-- stafflist.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff Members</title>
+    <style>
+      body {
+        height: 100vh;
+        background: #659adf !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 80%;
+        max-width: 800px;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #659adf;
+        color: white;
+      }
+      tr {
+        font-size: 16px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Staff Members</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% staffMembers.forEach(staffMember => { %>
+                <tr>
+                    <td><%= staffMember.fullname %></td>
+                    <td><%= staffMember.username %></td>
+                    <td><%= staffMember.mobile %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

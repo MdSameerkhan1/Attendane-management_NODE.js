@@ -1,0 +1,54 @@
+<!-- viewstudentslist.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Students List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <!-- Remove Student ID column -->
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Course Year</th>
+                    <th>Department</th>
+                    <th>Mark Attendance</th> <!-- New column for buttons -->
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(student => { %>
+                    <tr>
+                        <!-- Display student details in each column -->
+                        <td><%= student.fullname %></td>
+                        <td><%= student.username %></td>
+                        <td><%= student.mobile %></td>
+                        <td><%= student.email %></td>
+                        <td><%= student.courseyear %></td>
+                        <td><%= student.department %></td>
+                        <td>
+                            <!-- Buttons to mark present and absent -->
+                            <form action="/attendance" method="post">
+                                <input type="hidden" name="studentName" value="<%= student.fullname %>">
+                                <button type="submit" class="btn btn-success" name="status" value="present">Present</button>
+                                <button type="submit" class="btn btn-danger" name="status" value="absent">Absent</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

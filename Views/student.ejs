@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="/Public/Styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <style>
+    @import "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";
+
+/* -- import Roboto Font ------------------------------ */
+@import "//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+
+/* -- body styles ------------------------------------- */
+
+body {
+    font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial', sans-serif; 
+    background: #0277bd; 
+}
+
+/* -- button styles ------------------------------------- */
+
+
+/*-- signin-card animation ---------------------------------------- */
+.signin-card {
+  -webkit-animation: cardEnter 0.75s ease-in-out 0.5s;
+  animation: cardEnter 0.75s ease-in-out 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+}
+
+/* -- login paper styles ------------------------------ */
+.signin-card {
+  max-width: 350px;
+  border-radius: 2px;
+  margin: 20px auto;
+  padding: 20px;   
+  background-color: #eceff1; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19),
+  0 6px 6px rgba(0, 0, 0, .23); 
+}
+
+.signin-card { 
+  .logo-image, h1, p {
+    text-align: center;
+  }    
+}
+
+/* -- font styles ------------------------------------- */
+.display1 {
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.2;
+  color: #757575;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+.subhead {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #212121;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+/* card animation from Animate.css -------------------- */
+@-webkit-keyframes cardEnter {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    -ms-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    -ms-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    -ms-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    -ms-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    -ms-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes cardEnter {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    -ms-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    -ms-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    -ms-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    -ms-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    -ms-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="login" class="signin-card">
+      <div class="logo-image">
+      <img src="data:image/png;base64,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" alt="Logo" title="Logo" width="138">
+      </div>
+      <h1 class="display1">Login Here </h1>
+      <p class="subhead">Only Register Students Can be Logged In</p>
+      <form action="" method="post" class="" role="form">
+        <div id="form-login-username" class="form-group">
+          <input id="username" class="form-control" name="username" type="text" size="18" alt="login" required />
+          <span class="form-highlight"></span>
+          <span class="form-bar"></span>
+          <label for="username" class="float-label">login</label>
+        </div>
+        <div id="form-login-password" class="form-group">
+          <input id="passwd" class="form-control" name="password" type="password" size="18" alt="password" required>
+          <span class="form-highlight"></span>
+          <span class="form-bar"></span>
+          <label for="password" class="float-label">password</label>
+        </div>
+        <div id="form-login-remember" class="form-group">
+          <div class="checkbox checkbox-default">       
+              <input id="remember" type="checkbox" value="yes" alt="Remember me" class="">
+              <label for="remember">Remember me</label>      
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-block btn-info ripple-effect" type="submit" name="Submit" alt="sign in">Sign in</button>  
+        </div>
+    
+        </div>
+      </form>
+    </div>
+    </div>
+</body>
+</html>

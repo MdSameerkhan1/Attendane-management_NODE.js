@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="data:image/png;base64,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" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+             WELCOME ADMIN
+          </a>
+        </div>
+      </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">View Students List</h5>
+                    <p class="card-text">View List of Students.</p>
+                    <a href="/studentlist" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the above card structure for other cards -->
+
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://media.istockphoto.com/id/1311107708/photo/focused-cute-stylish-african-american-female-student-with-afro-dreadlocks-studying-remotely.jpg?s=612x612&w=0&k=20&c=OwxBza5YzLWkE_2abTKqLLW4hwhmM2PW9BotzOMMS5w=" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">View Staff Members</h5>
+                          <p class="card-text">Viewing  Staff Members present .</p>
+                          <a href="/stafflist" class="btn btn-primary">View</a>
+                      </div>
+                  </div>
+              </div>
+
+             
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/id/1334049837/photo/happy-black-elementary-student-and-his-teacher-giving-high-five-during-class-at-school.jpg?s=612x612&w=0&k=20&c=FCDW0QCVznTz_ulkUhzf3omablHHnIzAOmkyMR3v01Q=" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Update Staff Status</h5>
+                                <p class="card-text">View Staff Status.</p>
+                                <a href="/updatestaffstatus" class="btn btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                          
+
+                          
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <img src="https://media.istockphoto.com/id/1409722748/photo/students-raising-hands-while-teacher-asking-them-questions-in-classroom.jpg?s=612x612&w=0&k=20&c=NbVChOV9wIbQOhUD6BqpouZHHBbyQ2rkSjaVfIhpMv8=" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">View Marks</h5>
+                                            <p class="card-text"> Viewing the Marks.</p>
+                                            <a href="/viewmarks" class="btn btn-primary">View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                      <div class="col-md-4 mb-4">
+                                          <div class="card">
+                                              <img src="https://media.istockphoto.com/id/474306176/photo/yale-university-graduation-ceremonies.jpg?s=612x612&w=0&k=20&c=W9yb72ka-iApvw-TO7QAmdPfS58KjLpyLFJwf_7Dr4o=" class="card-img-top" alt="...">
+                                              <div class="card-body">
+                                                  <h5 class="card-title">View Assignments</h5>
+                                                  <p class="card-text">Assignments Assigned by Staff to Students.</p>
+                                                  <a href="/viewassignments" class="btn btn-primary">Show</a>
+                                              </div>
+                                          </div>
+                                      </div>
+
+        
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://media.istockphoto.com/id/1094792574/photo/young-man-with-a-thinking-expression.jpg?s=612x612&w=0&k=20&c=Lr5uHdVdC8fsa_-FPbEbrEvV7wri4XbCRvsXgEn0Vv0=" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">View Attendance</h5>
+                          <p class="card-text">Attendance Of Students.</p>
+                          <a href="/viewattendance" class="btn btn-primary">View</a>
+                      </div>
+                  </div>
+              </div>
+
+             
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/id/857615704/photo/blurred-defocused-background-of-public-event-exhibition-hall-business-trade-show-or-commercial.jpg?s=612x612&w=0&k=20&c=h-0q8kbiwY7m93CGMIwSg1u98VxALTqNXUzNo5BiHDs=" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Add Events</h5>
+                                <p class="card-text">Add Events Organised .</p>
+                                <a href="/addevents" class="btn btn-primary">Add</a>
+                            </div>
+                        </div>
+                    </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1175031702/photo/speaker-giving-presentation-on-scientific-business-conference.jpg?s=612x612&w=0&k=20&c=hKMVQYACx-OdiWszJ8u3_JtYcLLbvky0N4du53uOuhE=" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">View Events</h5>
+                    <p class="card-text">Viewing The Events.</p>
+                    <a href="/viewevents" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

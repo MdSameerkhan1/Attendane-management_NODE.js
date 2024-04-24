@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Events</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles if needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Events List</h1>
+
+        <!-- Search form -->
+        <form class="mt-3 mb-3" action="/viewevents" method="GET">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search by event name" name="search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <ul class="list-group">
+            <% events.forEach(event => { %>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5 class="mb-1"><strong><%= event.eventName %></strong></h5>
+                            <p class="mb-1">Date: <%= event.eventDate %></p>
+                            <p class="mb-1">Location: <%= event.eventLocation %></p>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- Delete button -->
+                            <form action="/deleteevent/<%= event._id %>" method="POST">
+                                <input type="hidden" name="_method" value="DELETE"> <!-- Use method override for DELETE request -->
+                                <button type="submit" class="btn btn-danger float-right">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

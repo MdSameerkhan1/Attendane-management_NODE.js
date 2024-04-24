@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Marks</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional additional CSS */
+        /* You can add custom CSS here */
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Ai School Of Learning </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/staffhome">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Student" aria-label="Search" name="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">The Marks Of Students</h1>
+        <ul class="list-group">
+            <% marks.forEach(mark => { %>
+                <li class="list-group-item">
+                    <strong><%= mark.studentName %></strong> - 
+                    Subject 1: <%= mark.subject1 %>, 
+                    Subject 2: <%= mark.subject2 %>, 
+                    Subject 3: <%= mark.subject3 %>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS (optional, only if you need JavaScript features) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

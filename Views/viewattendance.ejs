@@ -1,0 +1,35 @@
+<!-- viewattendance.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add any custom CSS styles here -->
+    <style>
+        /* Add custom styles if needed */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Attendance Records</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-group mt-3">
+                    <% attendanceRecords.forEach(record => { %>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Student Name:</strong> <%= record.studentName %></span>
+                            <span><strong>Status:</strong> <%= record.status %></span>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- addattendance.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Attendance</title>
+</head>
+<body>
+    <h1>Add Attendance</h1>
+    <form action="/attendance" method="POST">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="Late">Late</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
